@@ -22,14 +22,8 @@ public class Validator {
             { "alphanumeric", "^[a-zA-Z0-9 ]+$" },
             { "numeric", "\\d+" }
     };
-    /* MOVED to types array above
-    private static Pattern numeric = Pattern.compile("\\d+");
-    private static Pattern email = Pattern.compile("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");
-    private static Pattern alphanum = Pattern.compile("^[a-zA-Z0-9 ]+$");
-    private static Pattern general = Pattern.compile("^.+$");
-    */
 
-    // dat for pattern for validation and typename for error output
+    // data for pattern for validation and typename for error output
     private Pattern pattern = null;
     private String typename = null;
 

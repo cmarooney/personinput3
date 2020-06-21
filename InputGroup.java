@@ -55,7 +55,6 @@ public class InputGroup extends JPanel
                 gx = 0;
                 constraints.gridx = gx;
             }
-            // gx = 0; // don't think this is needed now
         }
 
         // border round table

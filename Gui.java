@@ -37,13 +37,6 @@ public class Gui extends JFrame {
     private InputGroup personal = null;
     private InputGroup address = null;
 
-    /* MOVED to Validator class. Can be deleted when functionality is confirmed.
-    private static Pattern numeric = Pattern.compile("\\d+");
-    private static Pattern email = Pattern.compile("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");
-    private static Pattern alphanum = Pattern.compile("^[a-zA-Z0-9 ]+$");
-    private static Pattern general = Pattern.compile("^.+$");
-    */
-
     // Construct the frame of the dialog and populate it from the above array of input items
     // Make it listen for data entry and data clearance
     public Gui()

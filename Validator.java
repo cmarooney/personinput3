@@ -1,8 +1,12 @@
 import java.util.regex.Pattern;
 
+/**
+ * Class to validate input in text fields in the dialog
+ */
 public class Validator {
 
-    public class ValidatorType
+    // Naming of validator types to correlate Pattern strings with validator names by number
+    public static class ValidatorType
     {
         static final int
         GENERAL = 0,
@@ -11,26 +15,32 @@ public class Validator {
         NUMERIC = 3;
     }
 
-    public Pattern pattern = null;
-    public String typename = null;
-
-    String[][] types = {
+    // Array of validator names and pattern regexes
+    public static String[][] types = {
             { "general", "^.+$" },
             { "email", "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$" },
             { "alphanumeric", "^[a-zA-Z0-9 ]+$" },
             { "numeric", "\\d+" }
     };
+    /* MOVED to types array above
     private static Pattern numeric = Pattern.compile("\\d+");
     private static Pattern email = Pattern.compile("^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");
     private static Pattern alphanum = Pattern.compile("^[a-zA-Z0-9 ]+$");
     private static Pattern general = Pattern.compile("^.+$");
+    */
 
+    // dat for pattern for validation and typename for error output
+    private Pattern pattern = null;
+    private String typename = null;
+
+    // Construct a validator giving it a compiled pattern and a name for output
     Validator(int type)
     {
         pattern = Pattern.compile(types[type][1]);
         typename = types[type][0];
     }
 
+    // method to validate a string s for the field named
     boolean validates(String s, String field)
     {
         if (!pattern.matcher(s).matches())

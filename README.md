@@ -29,4 +29,6 @@ tell the user exactly what is wrong.
 data but it would be helpful to have such a rudimentary
 use to validate the design and its ability to be
 incorporated in a larger structure.
-
+* Validation is against a single pattern and more could
+be done to sanity check the input (even before 
+considering more advanced features like locale)
